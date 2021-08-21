@@ -1,17 +1,18 @@
+// converter
+function converter(id) {
+  const text = document.getElementById(id);
+  const value = parseInt(text.innerText);
+  return value;
+}
+
 // Calculet total price
 function totalPrice() {
-  const bestPrice = document.getElementById("price");
-  const bestPriceValue = parseInt(bestPrice.innerText);
-  const ramCost = document.getElementById("ram-cost");
-  const ramCostValue = parseInt(ramCost.innerText);
-  const storageCost = document.getElementById("storage-cost");
-  const storageCostValue = parseInt(storageCost.innerText);
-  const deliveryCost = document.getElementById("delivery-cost");
-  const deliveryCostValue = parseInt(deliveryCost.innerText);
+  const bestPrice = converter("price");
+  const ramCost = converter("ram-cost");
+  const storageCost = converter("storage-cost");
+  const deliveryCost = converter("delivery-cost");
   const totalPrice = document.getElementById("total-price");
-  const totalPriceValue = parseInt(totalPrice);
-  const total =
-    bestPriceValue + ramCostValue + storageCostValue + deliveryCostValue;
+  const total = bestPrice + ramCost + storageCost + deliveryCost;
   totalPrice.innerText = total;
   return total;
 }
@@ -46,6 +47,7 @@ function selecded(elem) {
 }
 
 // Event For Ram Customization
+// Get Elements for RAM 
 const ram8Gb = document.getElementById("8gb-ram");
 const ram16Gb = document.getElementById("16gb-ram");
 const ramCost = document.getElementById("ram-cost");
@@ -56,6 +58,7 @@ ram8Gb.addEventListener("click", function () {
     ram8Gb.classList.add("selected");
     ram16Gb.classList.remove("selected");
   }
+  // Update-Price 
   totalPrice();
   updateTotal();
 });
@@ -66,15 +69,18 @@ ram16Gb.addEventListener("click", function () {
     ram16Gb.classList.add("selected");
     ram8Gb.classList.remove("selected");
   }
+  // Update-Price
   totalPrice();
   updateTotal();
 });
 
 // event for Storage Customization
+// Get Elements For Storage
 const ssd256Gb = document.getElementById("256gb-ssd");
 const ssd512Gb = document.getElementById("512gb-ssd");
 const ssd1Tb = document.getElementById("1tb-ssd");
 const storageCost = document.getElementById("storage-cost");
+// Event 
 ssd256Gb.addEventListener("click", function () {
   storageCost.innerText = 0;
   // defain selected Option
@@ -83,9 +89,11 @@ ssd256Gb.addEventListener("click", function () {
     ssd512Gb.classList.remove("selected");
     ssd1Tb.classList.remove("selected");
   }
+  // Update-Price
   totalPrice();
   updateTotal();
 });
+// Event
 ssd512Gb.addEventListener("click", function () {
   storageCost.innerText = 100;
   // defain selected Option
@@ -94,9 +102,11 @@ ssd512Gb.addEventListener("click", function () {
     ssd256Gb.classList.remove("selected");
     ssd1Tb.classList.remove("selected");
   }
+  // Update-Price
   totalPrice();
   updateTotal();
 });
+// Event
 ssd1Tb.addEventListener("click", function () {
   storageCost.innerText = 180;
   // defain selected Option
@@ -105,13 +115,16 @@ ssd1Tb.addEventListener("click", function () {
     ssd256Gb.classList.remove("selected");
     ssd1Tb.classList.add("selected");
   }
+  // Update-Price
   totalPrice();
   updateTotal();
 });
 
 // Event For Delivery Option Customization
+// Get Elements For Delivery 
 const freeDelivery = document.getElementById("free-delivery");
 const expressDelivery = document.getElementById("express-delivery");
+// Event
 const deliveryCost = document.getElementById("delivery-cost");
 freeDelivery.addEventListener("click", function () {
   deliveryCost.innerText = 0;
@@ -119,21 +132,24 @@ freeDelivery.addEventListener("click", function () {
     freeDelivery.classList.add("selected");
     expressDelivery.classList.remove("selected");
   }
+  // Update-Price
   totalPrice();
   updateTotal();
 });
-
+// Event
 expressDelivery.addEventListener("click", function () {
   deliveryCost.innerText = 20;
   if (!selecded(expressDelivery)) {
     freeDelivery.classList.remove("selected");
     expressDelivery.classList.add("selected");
   }
+  // Update-Price
   totalPrice();
   updateTotal();
 });
 
 // Event For apply Promo Code
 document.getElementById("promo").addEventListener("click", function () {
+  // Apply-Promo_Code
   promoCode();
 });

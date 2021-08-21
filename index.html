@@ -17,39 +17,46 @@
                 Customize Your iMac
             </h1>
         </header>
+        <!-- Main_Start_Here -->
         <main>
             <section class="mx-auto">
                 <div class="grid grid-cols-2 gap-8  mt-8">
+                    <!-- left-side -->
                     <div class="left-side">
                         <div id="img" class="lg:w-3/4 mx-auto">
                             <img src="img/mac.png" alt="mac-book-pro">
                         </div>
                     </div>
+                    <!-- Right_Side -->
                     <div class="right-side">
                         <div class="description">
-                            <h2 class="text-2xl font- medium">
+                            <h2 class="text-3xl font-semibold">
                                 Customize your Blue 24-inch iMac with Apple M1 chip.
                             </h2>
                             <p class="px-4 py-2">
                                 Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficency cores, 7- core GPU, and 16 - core Natural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/USB 4 port Magic Mouse Magic keyboard-US English
                             </p>
                         </div>
+                        <!-- Ram_Customization -->
                         <div class="memory my-4">
                             <h4 class="font- medium">RAM</h4>
                             <button id="8gb-ram" class="border-2 rounded p-1 my-2 bg-pink-200 selected"><span id="8gb">8</span> GB unified memory</button>
                             <button id="16gb-ram" class="border-2 rounded p-1 my-2 bg-pink-200 "> <span id="16gb">16</span> unified memory</button>
                         </div>
+                        <!-- Storage_Customization -->
                         <div class="storage my-4">
                             <h4 class="font- medium">Stroge</h4>
                             <button id="256gb-ssd" class="border-2 rounded p-1 my-2 bg-pink-200 selected"><span id="256gb">256</span> GB SSD Storage</button>
                             <button id="512gb-ssd" class="border-2 rounded p-1 my-2 bg-pink-200 "><span id="512gb">512</span>GB SSD Storage</button>
                             <button id="1tb-ssd" class="border-2 rounded p-1 my-2 bg-pink-200 "><span id="1tb">1</span>TB SSD Storage</button>
                         </div>
+                        <!-- Delivery_Option -->
                         <div class="delivery mt-4 mb-12">
                             <h4 class="font- medium l">Choose Your delivery option</h4>
                             <button id="free-delivery" class="border-2 rounded p-1 my-2 bg-pink-200 selected">Regular delivery(Free)</button>
-                            <button id="express-delivery" class="border-2 rounded p-1 my-2 bg-pink-200 ">Express delivery (Charge - $20 )</button>
+                            <button id="express-delivery" class="border-2 rounded p-1 my-2 bg-pink-200 ">Express delivery (Charge - $20)</button>
                         </div>
+                        <!-- Calculet_Total-Cost  -->
                         <div class="calculet">
                             <div class="grid grid-cols-2 font-medium">
                                 <p>Best Price</p>
@@ -71,11 +78,12 @@
                                 <p>Delivery Charge</p>
                                 <p>$<span id="delivery-cost">0</span> </p>
                             </div>
-                            <hr class="my-2 bold">
+                            <hr class="my-2 bold hrb">
                             <div class="grid grid-cols-2 font-semibold mb-4">
                                 <p>Total Price</p>
                                 <p>$<span id="total-price">1299</span> </p>
                             </div>
+                            <!-- Promo_Code  -->
                             <p>Add Promo Code</p>
                             <input id="input" type="text" class="border rounded p-1 m-2" placeholder="Insert Promo Code">
                             <button id="promo" class="bg-pink-600 text-white rounded py-1 px-4">Apply</button>
