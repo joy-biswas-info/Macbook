@@ -41,8 +41,8 @@ function promoCode() {
     input.value = "";
   }
 }
-// To defain Selected Element
-function selecded(elem) {
+// To Define Selected Element
+function selected(elem) {
   return elem.classList.contains("selected");
 }
 
@@ -53,8 +53,8 @@ const ram16Gb = document.getElementById("16gb-ram");
 const ramCost = document.getElementById("ram-cost");
 ram8Gb.addEventListener("click", function () {
   ramCost.innerText = 0;
-  // defain selected Option
-  if (!selecded(ram8Gb)) {
+  // Define selected Option
+  if (!selected(ram8Gb)) {
     ram8Gb.classList.add("selected");
     ram16Gb.classList.remove("selected");
   }
@@ -64,8 +64,8 @@ ram8Gb.addEventListener("click", function () {
 });
 ram16Gb.addEventListener("click", function () {
   ramCost.innerText = 180;
-  // defain selected Option
-  if (!selecded(ram16Gb)) {
+  // Define selected Option
+  if (!selected(ram16Gb)) {
     ram16Gb.classList.add("selected");
     ram8Gb.classList.remove("selected");
   }
@@ -83,8 +83,8 @@ const storageCost = document.getElementById("storage-cost");
 // Event 
 ssd256Gb.addEventListener("click", function () {
   storageCost.innerText = 0;
-  // defain selected Option
-  if (!selecded(ssd256Gb)) {
+  // Define selected Option
+  if (!selected(ssd256Gb)) {
     ssd256Gb.classList.add("selected");
     ssd512Gb.classList.remove("selected");
     ssd1Tb.classList.remove("selected");
@@ -96,8 +96,8 @@ ssd256Gb.addEventListener("click", function () {
 // Event
 ssd512Gb.addEventListener("click", function () {
   storageCost.innerText = 100;
-  // defain selected Option
-  if (!selecded(ssd512Gb)) {
+  // Define selected Option
+  if (!selected(ssd512Gb)) {
     ssd512Gb.classList.add("selected");
     ssd256Gb.classList.remove("selected");
     ssd1Tb.classList.remove("selected");
@@ -109,8 +109,8 @@ ssd512Gb.addEventListener("click", function () {
 // Event
 ssd1Tb.addEventListener("click", function () {
   storageCost.innerText = 180;
-  // defain selected Option
-  if (!selecded(ssd1Tb)) {
+  // Define selected Option
+  if (!selected(ssd1Tb)) {
     ssd512Gb.classList.remove("selected");
     ssd256Gb.classList.remove("selected");
     ssd1Tb.classList.add("selected");
@@ -128,7 +128,7 @@ const expressDelivery = document.getElementById("express-delivery");
 const deliveryCost = document.getElementById("delivery-cost");
 freeDelivery.addEventListener("click", function () {
   deliveryCost.innerText = 0;
-  if (!selecded(freeDelivery)) {
+  if (!selected(freeDelivery)) {
     freeDelivery.classList.add("selected");
     expressDelivery.classList.remove("selected");
   }
@@ -139,7 +139,7 @@ freeDelivery.addEventListener("click", function () {
 // Event
 expressDelivery.addEventListener("click", function () {
   deliveryCost.innerText = 20;
-  if (!selecded(expressDelivery)) {
+  if (!selected(expressDelivery)) {
     freeDelivery.classList.remove("selected");
     expressDelivery.classList.add("selected");
   }

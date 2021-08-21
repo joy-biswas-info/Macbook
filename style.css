@@ -4,12 +4,12 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .selected{
-    border: 1px solid purple;
-    background-color: #F9A8D4;
+    border: 2px solid #000;
+    background-color: #f345a583;
 }
 
 hr{
-    width: 500px;
+    width: 65%;
     border-top: 1px solid #000;
     margin: 20px 0;
 }
