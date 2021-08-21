@@ -1,3 +1,4 @@
+// Calculet total price
 function totalPrice() {
   const bestPrice = document.getElementById("price");
   const bestPriceValue = parseInt(bestPrice.innerText);
@@ -14,20 +15,27 @@ function totalPrice() {
   return total;
 };
 
+// Update price
 function updateTotal() {
   const total = document.getElementById('total');
   total.innerText = totalPrice();
 };
+
+// Apply promoCode
 function promoCode() {
   const total = document.getElementById("total");
   const input = document.getElementById("input");
+  const discount = document.getElementById('discount');
   const price = totalPrice();
   const inputValue = input.value;
   if (inputValue == "stevekaku") {
     total.innerText = price - (price / 100) * 20;
-    alert("Hurray You Have got 20% Discount");
+    // Show Discount 
+    discount.style.display = "block"
+    input.value='';
   } else {
     total.innerText = totalPrice();
+    input.value = "";
   }
 };
 // To defain Selected Element
@@ -35,6 +43,7 @@ function selecded(elem) {
   return elem.classList.contains("selected");
 };
 
+// Event For Ram Customization
 const ram8Gb = document.getElementById("8gb-ram");
 ram8Gb.addEventListener("click", function () {
   const ramCost = document.getElementById("ram-cost");
@@ -60,6 +69,7 @@ ram16Gb.addEventListener("click", function () {
   updateTotal();
 });
 
+// event for Storage Customization
 const ssd256Gb = document.getElementById("256gb-ssd");
 ssd256Gb.addEventListener("click", function () {
   const storageCost = document.getElementById("storage-cost");
@@ -101,6 +111,7 @@ ssd1Tb.addEventListener("click", function () {
   updateTotal();
 });
 
+// Event For Delivery Option Customization
 const freeDelivery = document.getElementById("free-delivery");
   freeDelivery.addEventListener("click", function () {
     const deliveryCost = document.getElementById("delivery-cost");
@@ -124,6 +135,8 @@ const expressDelivery = document.getElementById("express-delivery");
       totalPrice();
       updateTotal();
     });
+
+    // Event For apply Promo Code 
 document.getElementById('promo').addEventListener('click',function () {
 promoCode();
 })
