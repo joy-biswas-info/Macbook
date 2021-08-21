@@ -5,7 +5,8 @@ body{
 }
 .selected{
     border: 2px solid #000;
-    background-color: #f345a583;
+    background-color: blue;
+    color: #fff;
 }
 
 hr{
